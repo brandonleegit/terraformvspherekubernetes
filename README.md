@@ -21,9 +21,10 @@ After running the script, the resulting VMs are created in your vSphere environm
 
 On the Kubernetes master/controller:
 
-<If you use the naming I have used, this is .  Run the following:
+If you use the naming I have used, this is .  Run the following:
 
 ##Configure Kubernetes
+
 kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
 ##Configure kubectl to work with your cluster
