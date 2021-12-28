@@ -1,5 +1,5 @@
 # Terraform vSphere Kubernetes automated lab
-## Terraform vSphere Kubernetes automated Lab Build v1.0 - See the official blog post here:  
+## Terraform vSphere Kubernetes automated Lab Build v1.0 - See the official blog post here: https://www.virtualizationhowto.com/2021/12/terraform-vsphere-kubernetes-automated-lab-build-in-8-minutes/ 
 ## Author - Brandon Lee https://www.virtualizationhowto.com
 
 This is an automated Terraform script that:
