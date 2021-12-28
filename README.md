@@ -29,9 +29,9 @@ kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
 ##Configure kubectl to work with your cluster
 
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+- mkdir -p $HOME/.kube
+- sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+- sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ##Install your Kubernetes networking (choose one of the below):
 
