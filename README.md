@@ -35,21 +35,21 @@ kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
 ##Install your Kubernetes networking (choose one of the below):
 
-- Flannel
-  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+Flannel
+- kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
-- Calico
-  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</code></pre>
+Calico
+- kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</code></pre>
 
 
 
 On the two worker nodes
 
-##Run the kubeadm join command displayed on the Master/controller node, it will look like the following:
+Run the kubeadm join command displayed on the Master/controller node, it will look like the following:
 
 kubeadm join 10.1.149.123:6443 --token pqrc0n.iow5e2zycn5bu1uc \
         --discovery-token-ca-cert-hash sha256:7b6fd631048cc354927070a82a11e64e6afa539822a86058e335e3b3449979c4
 
-##If you accidentally close your session and need to see the join command run the following on your master:
+If you accidentally close your session and need to see the join command run the following on your master:
 
-kubeadm token create --print-join-command
+- kubeadm token create --print-join-command
