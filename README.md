@@ -19,7 +19,7 @@ This is an automated Terraform script that:
 After running the script, the resulting VMs are created in your vSphere environment ready to configure Kubernetes.
 
 
-On the Kubernetes master/controller:
+## On the Kubernetes master/controller:
 
 If you use the naming I have used, this is .  Run the following:
 
@@ -43,7 +43,7 @@ Calico
 
 
 
-On the two worker nodes
+## On the two worker nodes
 
 Run the kubeadm join command displayed on the Master/controller node, it will look like the following:
 
