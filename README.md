@@ -1,4 +1,4 @@
-# terraformvspherekubernetes
+# Terraform vSphere Kubernetes automated lab
 ## Terraform vSphere Kubernetes automated Lab Build v1.0 - See the official blog post here:  
 ## Author - Brandon Lee https://www.virtualizationhowto.com
 
