@@ -17,22 +17,28 @@ This is an automated Terraform script that:
 
 After running the script, the resulting VMs are created in your vSphere environment ready to configure Kubernetes.
 
+## Before running the script
 
-## On the Kubernetes master/controller:
+1.  Change the values in the .tfvars file in the parent folder to match your environment
+2.  There is hard coded IP addresses in the main.tf in each folder (kube-1, kube-2, kube-3)
+3.  There is a hard-coded DNS value in the main.tf for each kube-1, kube-2, and kube-3 folder in the provisioners section.  You will need to change this.
+
+## After running the script and the VMs have been provisioned
+### On the Kubernetes master/controller:
 
 If you use the naming I have used, this is .  Run the following:
 
-##Configure Kubernetes
+### Configure Kubernetes
 
 kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
-##Configure kubectl to work with your cluster
+### Configure kubectl to work with your cluster
 
 - mkdir -p $HOME/.kube
 - sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 - sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-##Install your Kubernetes networking (choose one of the below):
+### Install your Kubernetes networking (choose one of the below):
 
 Flannel
 - kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -42,7 +48,7 @@ Calico
 
 
 
-## On the two worker nodes
+### On the two worker nodes
 
 Run the kubeadm join command displayed on the Master/controller node, it will look like the following:
 
