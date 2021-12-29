@@ -48,7 +48,7 @@ Calico
 
 
 
-### On the two worker nodes
+## On the two worker nodes
 
 Run the kubeadm join command displayed on the Master/controller node, it will look like the following:
 
