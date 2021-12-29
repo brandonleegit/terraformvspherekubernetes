@@ -23,8 +23,8 @@ After running the script, the resulting VMs are created in your vSphere environm
 2.  There is hard coded IP addresses in the main.tf in each folder (kube-1, kube-2, kube-3)
 3.  There is a hard-coded DNS value in the main.tf for each kube-1, kube-2, and kube-3 folder in the provisioners section.  You will need to change this.
 
-## After running the script and the VMs have been provisioned
-### On the Kubernetes master/controller:
+
+## After running the script on the Kubernetes master/controller:
 
 If you use the naming I have used, this is .  Run the following:
 
